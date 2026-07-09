@@ -97,9 +97,9 @@ bash -c "$(curl -fsSLk https://waf.chaitin.com/release/latest/manager.sh)" -- --
 
 | File | Shows |
 |---|---|
-| `waf-block-page.png` | The WAF block response (money shot) |
-| `safeline-logs.png` | Blocked SQLi events with Kali source IP |
-| `safeline-dashboard.png` | Unprotected dump vs. protected block |
+| `screenshots/waf-block-page.png` | The WAF block response (money shot) |
+| `screenshots/safeline-logs.png` | Blocked SQLi events with Kali source IP |
+| `screenshots/safeline-dashboard.png` | Unprotected dump vs. protected block |
 
 ---
 
