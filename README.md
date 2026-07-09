@@ -89,17 +89,16 @@ bash -c "$(curl -fsSLk https://waf.chaitin.com/release/latest/manager.sh)" -- --
 | SQL injection, WAF in **detect-only** | Attack succeeds — DVWA dumps the user table |
 | SQL injection, WAF in **block** mode | Request blocked at the WAF, app never sees it, event logged |
 
-*(See `/screenshots` for the before/after and the WAF event log.)*
-
----
-
 ## Screenshots
 
-| File | Shows |
-|---|---|
-| `screenshots/waf-block-page.png` | The WAF block response (money shot) |
-| `screenshots/safeline-logs.png` | Blocked SQLi events with Kali source IP |
-| `screenshots/safeline-dashboard.png` | Unprotected dump vs. protected block |
+### SafeLine WAF dashboard
+![SafeLine dashboard](screenshots/safeline-dashboard.png)
+
+### The WAF blocking the SQL injection
+![WAF block page](screenshots/waf-block-page.png)
+
+### Blocked SQLi events in the WAF logs
+![SafeLine security logs](screenshots/safeline-logs.png)
 
 ---
 
@@ -124,9 +123,3 @@ Real gotchas hit during this build — documented because they're the useful par
 - Ship WAF logs into a SIEM (e.g. Wazuh) for detection engineering
 
 ---
-
-## Credits
-
-Based on the *Web Application Firewall Home Lab using SafeLine WAF* guide by Royden Rebello (The Social Dork) · [walkthrough video](https://youtu.be/N0dEC1nuWCQ).
-
-> ⚠️ **Lab use only.** DVWA is intentionally vulnerable — keep this environment isolated from any production or internet-facing network.
